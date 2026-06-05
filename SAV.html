@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="desciption" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+
+<style>     
+
+
+/* ===== BODY (comme ton design existant) ===== */
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:40px;
+    background:#f5f5f5;
+}
+.back-btn{
+    display:inline-block;
+    margin-bottom:30px;
+    text-decoration:none;
+    color:#0056d6;
+    font-weight:bold;
+}
+/* ===== SAV CONTAINER ===== */
+.sav-container{
+    display:flex;
+    gap:50px;
+    align-items:flex-start;
+}
+
+/* ===== COLONNE GAUCHE (FORMULAIRE) ===== */
+.sav-left{
+    width:35%;
+    background:#fff;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.sav-left h2{
+    color:#0056d6;
+    margin-bottom:5px;
+}
+
+.sav-left p{
+    line-height:1.7;
+    color:#444;
+}
+
+/* FORM */
+.sav-form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:20px;
+}
+
+.sav-form input,
+.sav-form textarea{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    font-size:14px;
+    font-family: Arial, sans-serif;
+}
+
+.sav-form textarea{
+    resize:none;
+}
+
+.sav-form button{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 20px;
+    background:#0056d6;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sav-form button:hover{
+    background:#003fa3;
+}
+
+/* ===== COLONNE DROITE (DOCUMENTATION) ===== */
+.sav-right{
+    width:65%;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    background:#fff;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.sav-right h2{
+    color:#0056d6;
+    margin-top:0;
+}
+
+/* BLOCS DOC */
+.doc-block{
+    border-top:1px solid #eee;
+    padding-top:15px;
+}
+
+.doc-block h3{
+    color:#0056d6;
+}
+
+.doc-block p{
+    color:#444;
+    line-height:1.6;
+}
+
+.doc-block ul{
+    padding-left:20px;
+}
+
+.doc-block li{
+    margin-bottom:10px;
+    color:#444;
+}
+
+.doc-block a{
+    color:#0056d6;
+    text-decoration:none;
+}
+
+.doc-block a:hover{
+    text-decoration:underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1000px){
+
+    .sav-container{
+        flex-direction:column;
+    }
+
+    .sav-left,
+    .sav-right{
+        width:100%;
+    }
+
+    .sav-right{
+        flex-direction:column;
+    }
+}
+
+</style>
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <b>← Retour </b>
+    </a>
+    <section class="sav-container">
+
+        <!-- GAUCHE : DEMANDE D'ASSISTANCE -->
+        <div class="sav-left">
+            <h2>📋 Demande d'assistance</h2>
+            <p>Besoin d'aide avec votre machine vapeur ?<br>
+            Remplissez le formulaire ci-dessous et notre équipe technique vous répondra dans les plus brefs délais.</p>
+    
+            <form class="sav-form">
+                <input type="text" placeholder="Nom et prénom" required>
+                <input type="text" placeholder="Société (optionnel)">
+                <input type="email" placeholder="E-mail" required>
+                <input type="tel" placeholder="Téléphone">
+                <input type="text" placeholder="Modèle de la machine">
+                <input type="text" placeholder="Numéro de série">
+                <input type="text" placeholder="Sujet de la demande">
+                <textarea placeholder="Description du problème" rows="5"></textarea>
+    
+                <input type="file">
+    
+                <button type="submit">Envoyer la demande</button>
+            </form>
+        </div>
+    
+        <!-- DROITE : DOCUMENTATION -->
+        <div class="sav-right">
+            <h2>📚 Documentation</h2>
+    
+            <div class="doc-block">
+                <h3>Manuels d'utilisation</h3>
+                <p>Téléchargez les manuels de vos machines pour connaître les procédures et consignes de sécurité.</p>
+    
+                <ul>
+                    <li>Machine SV-300 — <a href="#">Télécharger PDF</a></li>
+                    <li>Machine SV-500 — <a href="#">Télécharger PDF</a></li>
+                    <li>Machine PRO-1000 — <a href="#">Télécharger PDF</a></li>
+                </ul>
+            </div>
+    
+            <div class="doc-block">
+                <h3>Guides d'entretien</h3>
+                <ul>
+                    <li>Nettoyage quotidien</li>
+                    <li>Entretien hebdomadaire</li>
+                    <li>Détartrage</li>
+                    <li>Vérification des accessoires</li>
+                </ul>
+            </div>
+    
+            <div class="doc-block">
+                <h3>Fiches techniques</h3>
+                <ul>
+                    <li>Pression vapeur</li>
+                    <li>Température de fonctionnement</li>
+                    <li>Capacité du réservoir</li>
+                    <li>Consommation électrique</li>
+                    <li>Dimensions et poids</li>
+                </ul>
+            </div>
+        </div>
+    
+    </section>
+    
+     
+</body>
+</html>

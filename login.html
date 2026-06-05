@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="png" href="images1/icon/favicon.png">
+	<title>Connexion / Inscription</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+</head>
+<body>
+	
+	<div class="form-box">
+		<div class="button-box">
+			<div id="btn"></div>
+			<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Se Connecter</button>
+			<button type="button" class="toggle-btn" id="reg" onclick="register()">S'inscrire</button>
+		</div>
+		<form id="login" class="input-group1" action="index.html">
+			<div class="inp">
+				<img src="images1/icon/user.png">
+				<input type="text" id="email" class="input-field" placeholder="CIN" style="width: 88%; border:none;" required="required">
+			</div>
+			<div class="inp">
+				<img src="images1/icon/password.png">
+				<input type="password" id="password" class="input-field" placeholder="Mot de passe" style="width: 88%; border: none;" required="required">
+			</div>
+			<div class="radio_input">
+				<input type="radio" name="person" id="" required>Société
+				<input type="radio" name="person" id="" required>Technicien
+				
+				<div class="line"></div>
+				<input type="radio" name="person" id="" required>Administrateur
+			</div>
+			<input type="checkbox" class="check-box">Se souvenir du mot de passe
+			<button type="submit" class="submit-btn">Se connecter</button>
+			
+		</form>
+		
+		<div class="other" id="other">
+			<div class="instead">
+				<h3>ou</h3>
+			</div>
+			<button class="connect" >
+				<img src="images1/icon/google.png"><span>Se connecter avec Google</span>
+			</button>
+		</div>
+	
+		<form id="register" class="input-group2" onsubmit="return validateForm()">
+			<input id="cin" type="text" class="input-field" placeholder="CIN" required="required">
+			<input id="nom" type="text" class="input-field" placeholder="Nom complet" required="required">
+			<input type="email" class="input-field" placeholder="Adresse e-mail" required="required">
+			<input id="pass1" type="password" class="input-field" placeholder="Créer un mot de passe" name="psame" required="required">
+			<input id="pass2" type="password" class="input-field" placeholder="Confirmer le mot de passe" name="psame" required="required">
+			<div class="radio_input" >
+				<input type="radio" name="person" required="required">Formateur
+				<input type="radio" name="person" required="required">Membre
+				<input type="radio" name="person" required="required">Expert
+				<input type="radio" name="person" required="required">Étudiant
+				<div class="line"></div>
+				<input type="radio" name="person" id="" required>Administrateur
+			</div>
+			<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">J'accepte les termes et conditions
+			<button type="submit" id="btnSubmit" disabled class="submit-btn reg-btn">S'inscrire</button>
+		</form>
+
+		<div id="toast" class="toast"></div>
+	
+	</div>
+	<script type="text/javascript" src="script1.js"></script>
+	
+</body>
+</html>
